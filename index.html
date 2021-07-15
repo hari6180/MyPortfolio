@@ -7,7 +7,7 @@
     <title>Hari's Portfolio</title>
     <meta name="description" content="Portfolio for world-renowned software engineer Hari" />
     <meta name="author" content="Hari" />
-    <link rel="icon" type="image/png" href="imgs/favicon.png" />
+    <link rel="icon" type="image/png" href="imgs/favicon.png?v2=" />
     <script src="https://kit.fontawesome.com/f27ac0bcc1.js" crossorigin="anonymous"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
@@ -18,7 +18,35 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav id="navbar"></nav>
+    <nav id="navbar">
+      <div class="navbar__logo">
+        <img src="/imgs/favicon.png" alt="logo" />
+        <a href="#">Hari</a>
+      </div>
+      <div class="navbar__menu">
+        <ul class="navbar__menu">
+          <li class="navbar__menu__item">Home</li>
+          <li class="navbar__menu__item">About</li>
+          <li class="navbar__menu__item">Skills</li>
+          <li class="navbar__menu__item">My work</li>
+          <li class="navbar__menu__item">Testimonial</li>
+          <li class="navbar__menu__item">Contact</li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Home -->
+    <section id="home">
+      <img src="imgs/profile.png" alt="Hari's profile photo" class="home__avatar" />
+      <h1 class="home__title">
+        Hello, <br />
+        I'm creative programmer!
+      </h1>
+      <h2 class="home__description">
+        A frontend developer specialized in creative content and javascript.
+      </h2>
+      <button class="home__contact">Contact me</button>
+    </section>
     <!-- About -->
     <section id="about"></section>
     <!-- Skills -->
