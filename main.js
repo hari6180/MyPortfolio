@@ -49,7 +49,41 @@ document.addEventListener("scroll", () => {
   }
 });
 
+const all = document.querySelector(".all");
+const webBasic = document.querySelector(".basic-web");
+const react = document.querySelector(".react");
+const fullStack = document.querySelector(".full-stack");
+const projects = document.querySelectorAll(".project");
+
+all.addEventListener("click", () => {
+  projects.forEach((project) => {
+    project.classList.remove("hide");
+  });
+});
+
+webBasic.addEventListener("click", () => {
+  VisibleProjects("basic-web");
+});
+
+react.addEventListener("click", () => {
+  VisibleProjects("react");
+});
+
+fullStack.addEventListener("click", () => {
+  VisibleProjects("full-stack");
+});
+
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });
+}
+
+function VisibleProjects(data) {
+  projects.forEach((project) => {
+    if (project.dataset.project === data) {
+      project.classList.remove("hide");
+    } else {
+      project.classList.add("hide");
+    }
+  });
 }
